@@ -37,6 +37,9 @@ public class User {
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    @Column(unique = true)
+    private String lineUserId;
+
     public enum Role {
         USER, ADMIN
     }
